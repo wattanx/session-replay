@@ -12,4 +12,12 @@ export default defineNuxtConfig({
     // @ts-expect-error
     plugins: [tailwindcss()],
   },
+  nitro: {
+    storage: {
+      db: {
+        driver: "fs",
+        base: "./.data/db",
+      },
+    },
+  },
 });
